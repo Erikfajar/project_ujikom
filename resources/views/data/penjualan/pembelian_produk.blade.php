@@ -40,7 +40,7 @@
                                                         <label class="form-label mg-b-0">Produk </label>
                                                     </div>
                                                     <div class="col-md-9 mg-t-5 mg-md-t-0">
-                                                        <select onkeyup="sum();" id="produk_id" name="produk_id"
+                                                        <select onchange="sum();" id="produk_id" name="produk_id"
                                                             class="form-control select2" >
                                                             <option value="" disabled selected>== Pilih Produk ==
                                                             </option>
