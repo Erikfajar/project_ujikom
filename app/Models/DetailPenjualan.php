@@ -16,7 +16,7 @@ class DetailPenjualan extends Model
     // MENERIMA RELASI DARI TABLE PENJUALAN
     public function penjualan()
     {
-        return $this->belongsTo(penjualan::class);// MANY TO ONE/ONE TO MANY
+        return $this->belongsTo(Penjualan::class);// MANY TO ONE/ONE TO MANY
     }
 
     // MENERIMA RELASI DARI TABLE PRDUK

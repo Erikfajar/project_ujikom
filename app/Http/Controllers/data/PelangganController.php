@@ -60,7 +60,8 @@ class PelangganController extends Controller
             [
                 'nama_pelanggan' => 'required',
                 'alamat' => 'required',
-                'nomor_telepon' => 'required|numeric'
+                'nomor_telepon' => 'required|numeric',
+                'nomor_telepon' => 'unique:pelanggan,nomor_telepon'
             ],
 
             // FUNGSI UNTUK MEMBERI TAU KALO ADA YANG TIDAK SESUAI WAKTU VALIDASI
@@ -70,6 +71,7 @@ class PelangganController extends Controller
                 'nomor_telepon.required' => 'No Telpn harus di isi',
                 // 'nomor_telepon.max' => 'No Telpn maksimal 15 angka',
                 'nomor_telepon.numeric' => 'No Telpn harus berupa angka',
+                'nomor_telepon.unique' => 'No Telpn sudah terpakai',
 
             ]
         );

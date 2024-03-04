@@ -14,7 +14,7 @@ class Pelanggan extends Model
     // MENGIRIM RELASI KE TABLE PENJUALAN
     public function penjualan()
     {
-        return $this->hasOne(penjualan::class); // ONE TO ONE
+        return $this->hasOne(Penjualan::class); // ONE TO ONE
     }
 
 

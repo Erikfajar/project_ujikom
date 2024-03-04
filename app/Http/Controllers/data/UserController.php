@@ -50,7 +50,7 @@ class UserController extends Controller
         // VALIDASI DATA
       $request->validate([
         'username' => 'required|max:30',
-        'email' => 'required|email',
+        'email' => 'required|email|unique:users,email',
         'password' => 'required|max:60|min:8',
         'nama_lengkap' => 'required|max:50',
         'alamat' => 'required',
@@ -58,6 +58,8 @@ class UserController extends Controller
       ],[
         'username.required' => 'Username harus di isi',
         'username.max' => 'Username maksimal 30 karakter',
+        'email.required' => 'Email harus di isi', 
+        'email.unique' => 'Email sudah terpakai', 
         'password.required' => 'Password harus di isi',
         'password.min' => 'Password minimal 8 karakter',
         'password.max' => 'Password minimal 60 karakter',
